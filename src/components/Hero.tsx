@@ -73,7 +73,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-black transition-all hover:opacity-85 active:scale-[0.97]"
                 style={{ backgroundColor: "var(--ink)", color: "var(--canvas)" }}
               >
-                View work <span aria-hidden>↗</span>
+                View work <span aria-hidden>↗︎</span>
               </a>
               <a
                 href="#contact"

@@ -141,7 +141,7 @@ export default async function ArticlePage({
                 className="text-sm font-bold transition-opacity hover:opacity-60"
                 style={{ color: "var(--accent)" }}
               >
-                {link.label} ↗
+                {link.label} ↗︎
               </a>
             ))}
           </div>

@@ -59,7 +59,7 @@ export default function Contact() {
                 style={{ color: "var(--accent)" }}
                 aria-hidden
               >
-                ↗
+                ↗︎
               </span>
             </a>
 

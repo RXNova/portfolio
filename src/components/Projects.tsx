@@ -23,7 +23,7 @@ export default function Projects() {
               className="text-[11px] font-black uppercase tracking-[0.25em] transition-opacity hover:opacity-60"
               style={{ color: "var(--accent)" }}
             >
-              github.com/rxnova ↗
+              github.com/rxnova ↗︎
             </a>
           </div>
 
@@ -45,7 +45,7 @@ export default function Projects() {
                     style={{ color: "var(--accent)" }}
                     aria-hidden
                   >
-                    ↗
+                    ↗︎
                   </span>
                 </div>
                 <p className="flex-1 text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
