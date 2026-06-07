@@ -1,20 +1,8 @@
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans, Lora } from "next/font/google"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import Nav from "@/components/Nav"
-import "./globals.css"
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-})
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  display: "swap",
-})
+import { jakarta, lora } from "@/lib/fonts"
+import "../globals.css"
 
 export const metadata: Metadata = {
   title: "Pradeep Kancharla — Senior Software Engineer & Frontend Lead",
