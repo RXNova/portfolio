@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { getAllPosts, getPostMeta, getHeadings } from "@/lib/posts"
 
@@ -15,6 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const meta = getPostMeta(slug)
+  if (!meta) return {}
   return {
     title: `${meta.title} — System Design`,
     description: meta.excerpt,
@@ -34,6 +36,7 @@ export default async function PostPage({
 }) {
   const { slug } = await params
   const meta = getPostMeta(slug)
+  if (!meta) notFound()
   const headings = getHeadings(slug)
   const { default: Post } = await import(`@/content/system-design/${slug}.mdx`)
 

@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "posts:gen": "node scripts/generate-posts.mjs",
+    "predev": "npm run posts:gen",
     "dev": "next dev",
+    "prebuild": "npm run posts:gen",
     "build": "next build && opennextjs-cloudflare build --skipNextBuild",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+    "deploy": "npm run posts:gen && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "npm run posts:gen && opennextjs-cloudflare build && opennextjs-cloudflare preview"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
