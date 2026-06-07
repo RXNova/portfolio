@@ -3,11 +3,12 @@
 import { personal } from "@/data/portfolio"
 
 const NAV_LINKS = [
-  { href: "#experience", label: "Experience" },
-  { href: "#projects",   label: "Projects"   },
-  { href: "#skills",     label: "Skills"     },
-  { href: "#blog",       label: "Writing"    },
-  { href: "#contact",    label: "Contact"    },
+  { href: "#experience",    label: "Experience"    },
+  { href: "#projects",      label: "Projects"      },
+  { href: "#skills",        label: "Skills"        },
+  { href: "#blog",          label: "Writing"       },
+  { href: "/system-design", label: "System Design" },
+  { href: "#contact",       label: "Contact"       },
 ]
 
 export default function Nav() {
