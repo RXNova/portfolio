@@ -35,7 +35,7 @@ export default async function ArticlePage({
       <div className="mx-auto max-w-2xl">
         {/* Back link */}
         <Link
-          href="/#blog"
+          href="/writing"
           className="mb-12 inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] transition-opacity hover:opacity-60"
           style={{ color: "var(--accent)" }}
         >
@@ -150,7 +150,7 @@ export default async function ArticlePage({
         {/* Footer divider */}
         <div className="mt-16 border-t pt-8" style={{ borderColor: "var(--line)" }}>
           <Link
-            href="/#blog"
+            href="/writing"
             className="text-[11px] font-black uppercase tracking-[0.25em] transition-opacity hover:opacity-60"
             style={{ color: "var(--accent)" }}
           >

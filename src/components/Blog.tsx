@@ -1,7 +1,11 @@
 import { articles } from "@/data/articles"
 import SectionHeader from "@/components/SectionHeader"
 
+const PREVIEW_COUNT = 5
+
 export default function Blog() {
+  const recent = articles.slice(0, PREVIEW_COUNT)
+
   return (
     <section
       id="blog"
@@ -12,7 +16,7 @@ export default function Blog() {
         <SectionHeader index="04" title="Writing" />
 
         <div className="mt-12">
-          {articles.map((post, i) => (
+          {recent.map((post, i) => (
             <a
               key={i}
               href={`/writing/${post.slug}`}
@@ -54,6 +58,22 @@ export default function Blog() {
           ))}
           <div className="border-t" style={{ borderColor: "var(--line)" }} />
         </div>
+
+        {articles.length > PREVIEW_COUNT && (
+          <a
+            href="/writing"
+            className="group mt-10 inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] transition-opacity hover:opacity-60"
+            style={{ color: "var(--accent)" }}
+          >
+            View all writing
+            <span
+              className="inline-block transition-transform duration-200 group-hover:translate-x-1"
+              aria-hidden
+            >
+              →
+            </span>
+          </a>
+        )}
       </div>
     </section>
   )
