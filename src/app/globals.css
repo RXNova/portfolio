@@ -152,14 +152,3 @@ a, button {
 .project-card { border-color: var(--line); }
 .project-card:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 
-/* ── MDX heading permalinks (rehype-autolink-headings) ── */
-.heading-anchor {
-  margin-left: 0.4em;
-  color: var(--fade);
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-.group:hover > .heading-anchor,
-.heading-anchor:focus { opacity: 1; }
-
